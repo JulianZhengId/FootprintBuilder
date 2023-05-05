@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 28189c120c5b0a643bb9d1639407953e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - woodTexture: {instanceID: 0}
+  - steelTexture: {instanceID: 0}
+  - concreteTexture: {instanceID: 0}
+  - brickTexture: {instanceID: 0}
+  - basicWoodTexture: {instanceID: 0}
+  - basicSteelTexture: {instanceID: 0}
+  - basicConcreteTexture: {instanceID: 0}
+  - basicBrickTexture: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

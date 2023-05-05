@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: Marker Image Library
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5474056014973482295
+  m_GuidHigh: 17878780632677655480
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4740593379592700967
+      m_GuidHigh: 18106896621814655664
+    m_SerializedTextureGuid:
+      m_GuidLow: 6274706443923463544
+      m_GuidHigh: 8474829072029415176
+    m_Size: {x: 0.15, y: 0.12563178}
+    m_SpecifySize: 1
+    m_Name: schoko and keks
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4752063383406279831
+      m_GuidHigh: 12291083054993056646
+    m_SerializedTextureGuid:
+      m_GuidLow: 6927902178272731256
+      m_GuidHigh: 9969594609397912074
+    m_Size: {x: 0.15, y: 0.1112216}
+    m_SpecifySize: 1
+    m_Name: schoko
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4768037128589509869
+      m_GuidHigh: 16777415219406769551
+    m_SerializedTextureGuid:
+      m_GuidLow: 8832754120818588950
+      m_GuidHigh: 14507185695312728217
+    m_Size: {x: 0.15, y: 0.0980625}
+    m_SpecifySize: 1
+    m_Name: schoko weniger zucker
+    m_Texture: {fileID: 0}
