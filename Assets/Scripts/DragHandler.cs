@@ -151,11 +151,11 @@ public class DragHandler : MonoBehaviour
         //Money
         float amountCost = 0;
         var difficulty = GameData.gameData.DifficultyGame;
-        if (difficulty == GameData.Difficulty.easy)
+        if (difficulty == GameData.Difficulty.EASY)
         {
             amountCost += squaremeter * costScale * 3000;
         }
-        else if (difficulty == GameData.Difficulty.medium)
+        else if (difficulty == GameData.Difficulty.MEDIUM)
         {
             amountCost += squaremeter * costScale * 3500;
         }

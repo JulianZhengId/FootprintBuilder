@@ -29,18 +29,19 @@ public class MenuHandler : MonoBehaviour
 
         if (difficulty == "high")
         {
-            GameData.gameData.DifficultyGame = GameData.Difficulty.hard;
+            GameData.gameData.DifficultyGame = GameData.Difficulty.HARD;
         }
         else if (difficulty == "middle")
         {
-            GameData.gameData.DifficultyGame = GameData.Difficulty.medium;
+            GameData.gameData.DifficultyGame = GameData.Difficulty.MEDIUM;
         }
         else
         {
-            GameData.gameData.DifficultyGame = GameData.Difficulty.easy;
+            GameData.gameData.DifficultyGame = GameData.Difficulty.EASY;
         }
         GameData.gameData.MoneyLimit = 1000000;
         GameData.gameData.CO2Limit = 13500;
+        GameData.ResetData();
         LoaderUtility.Initialize();
         SceneManager.LoadSceneAsync(1);
         return;

@@ -16,11 +16,11 @@ public class TextHandler : MonoBehaviour
     private void Awake()
     {
         var difficulty = GameData.gameData.DifficultyGame;
-        if (difficulty == GameData.Difficulty.easy)
+        if (difficulty == GameData.Difficulty.EASY)
         {
             SetDifficultyText("Low");
         }
-        else if (difficulty == GameData.Difficulty.medium)
+        else if (difficulty == GameData.Difficulty.MEDIUM)
         {
             SetDifficultyText("Middle");
         }

@@ -17,11 +17,11 @@ public class Leaderboard : MonoBehaviour
     void Awake()
     {
         warningText.color = new Color(0, 0, 0, 0);
-        if (GameData.gameData.DifficultyGame == GameData.Difficulty.easy)
+        if (GameData.gameData.DifficultyGame == GameData.Difficulty.EASY)
         {
             leaderboardTitle.text = "Leaderboard (Low)";
         }
-        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.medium)
+        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.MEDIUM)
         {
             leaderboardTitle.text = "Leaderboard (Middle)";
         }
@@ -37,11 +37,11 @@ public class Leaderboard : MonoBehaviour
         StartCoroutine(ShowWarningText(1f));
         AddEntry(GameData.gameData.Result.indexScore, GameData.gameData.Result.moneyUsage, GameData.gameData.Result.co2Consumption);
         string key;
-        if (GameData.gameData.DifficultyGame == GameData.Difficulty.easy)
+        if (GameData.gameData.DifficultyGame == GameData.Difficulty.EASY)
         {
             key = "LeaderboardLow";
         }
-        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.medium)
+        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.MEDIUM)
         {
             key = "LeaderboardMiddle";
         }
@@ -89,11 +89,11 @@ public class Leaderboard : MonoBehaviour
 
         //Add To List
         string key;
-        if (GameData.gameData.DifficultyGame == GameData.Difficulty.easy)
+        if (GameData.gameData.DifficultyGame == GameData.Difficulty.EASY)
         {
             key = "LeaderboardLow";
         }
-        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.medium)
+        else if (GameData.gameData.DifficultyGame == GameData.Difficulty.MEDIUM)
         {
             key = "LeaderboardMiddle";
         }

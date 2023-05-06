@@ -11,9 +11,24 @@ public class GameData : MonoBehaviour
 
     public enum Difficulty
     {
-        easy,
-        medium,
-        hard
+        EASY,
+        MEDIUM,
+        HARD
+    }
+
+    public struct GameResult
+    {
+        public float moneyUsage;
+        public float co2Consumption;
+        public float indexScore;
+
+        public GameResult(float moneyLeft, float co2Left)
+        {
+            moneyUsage = Mathf.RoundToInt(1000000 - moneyLeft);
+            co2Consumption = Mathf.RoundToInt(co2Left);
+            if (co2Consumption == 0 || moneyUsage == 0) indexScore = 0;
+            else indexScore = Mathf.Round(moneyUsage / co2Consumption * 100) / 100;
+        }
     }
 
     public struct BuildingData
@@ -83,21 +98,6 @@ public class GameData : MonoBehaviour
         }
     }
 
-    public struct GameResult
-    {
-        public float moneyUsage;
-        public float co2Consumption;
-        public float indexScore;
-
-        public GameResult(float moneyLeft, float co2Left)
-        {
-            moneyUsage = Mathf.RoundToInt(1000000 - moneyLeft);
-            co2Consumption = Mathf.RoundToInt(co2Left);
-            if (co2Consumption == 0 || moneyUsage == 0) indexScore = 0;
-            else indexScore = Mathf.Round(moneyUsage / co2Consumption * 100) / 100;
-        }
-    }
-
     public static GameData gameData;
     private float moneyLimit = 0;
     private float co2Limit = 0;
@@ -109,6 +109,20 @@ public class GameData : MonoBehaviour
     private GameResult result;
     private List<GameObject> spawnedObjects = new List<GameObject>();
     private byte[] screenshotBytes;
+
+    public static void ResetData()
+    {
+        if (gameData == null) return;
+
+        gameData.SelectedObject = null;
+        gameData.DataA = new BuildingData(null);
+        gameData.DataB = new BuildingData(null);
+        gameData.EditMode = EditModes.IDLE;
+        gameData.Result = new GameResult(1000000, 225000);
+        gameData.ScreenshotBytes = null;
+        gameData.SpawnedObjects = new List<GameObject>();
+
+    }
 
     public EditModes EditMode
     {
@@ -177,16 +191,16 @@ public class GameData : MonoBehaviour
 
     void Singleton()
     {
-        if (GameData.gameData == null)
+        if (gameData == null)
         {
-            GameData.gameData = this;
+            gameData = this;
         }
         else
         {
-            if (GameData.gameData != this)
+            if (gameData != this)
             {
-                Destroy(GameData.gameData.gameObject);
-                GameData.gameData = this;
+                Destroy(gameData.gameObject);
+                gameData = this;
             }
         }
         DontDestroyOnLoad(this.gameObject);

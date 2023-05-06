@@ -292,11 +292,11 @@ public class ButtonHandler : MonoBehaviour
         //Cost
         float amountCost = 0f;
         var difficulty = GameData.gameData.DifficultyGame;
-        if (difficulty == GameData.Difficulty.easy)
+        if (difficulty == GameData.Difficulty.EASY)
         {
             amountCost += squaremeter * costScale * 3000;
         }
-        else if (difficulty == GameData.Difficulty.medium)
+        else if (difficulty == GameData.Difficulty.MEDIUM)
         {
             amountCost += squaremeter * costScale * 3500;
         }
